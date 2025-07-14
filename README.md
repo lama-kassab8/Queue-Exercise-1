@@ -1,33 +1,50 @@
-# Customer Service Queue Simulation
+# Customer Service Queue Simulation (List-Based & Linked List–Based)
 
-This project simulates a basic customer service system using a queue (FIFO – First In, First Out).
+This project simulates a basic **customer service system** using **two implementations of a queue**:
 
-## Description
+1. A **list-based queue** using Python's built-in list.
+2. A **linked list–based queue** using a custom `ListNode` class.
 
-Customers arrive and are added to a queue. Each customer is served in the order they arrive. Once served, they leave the queue.
+Customers arrive and join a service queue. Each customer is served in the order they arrive (**FIFO: First-In-First-Out**). Once served, they leave the queue. Both implementations display arriving and served customers, and notify when all customers are served.
 
-The program performs the following actions:
+---
 
-- Enqueue customer names as they arrive.
-- Dequeue and display the name of each customer as they are served.
-- Display a final message when the queue is empty.
+## Learning Goals
 
-## Sample Output
-Arriving: Alice
-Arriving: Bob
-Arriving: Carol
-Serving: Alice
-Serving: Bob
-Serving: Carol
-All customers served.
+- Understand how queues work using different data structures
+- Practice queue operations: enqueue and dequeue
+- Compare static (list-based) and dynamic (linked list–based) queue behaviors
 
-## Concepts Practiced
+---
 
-- Queue data structure
-- Enqueue and dequeue operations
-- While loops and conditionals
-- Basic input/output
+## Features
 
-## Status
+- Enqueue customer names as they arrive
+- Dequeue and display customers in the order they were added
+- Print status messages as customers are served
+- Handle edge cases when the queue is empty
 
-In Progress
+---
+
+## Technologies
+
+- Python
+- List-based queue (built-in list)
+- Linked list queue (custom `ListNode` + `LinkedListQueue` classes)
+
+---
+
+## File Structure
+
+Both queue implementations are included in the same `.py` file:
+
+1. **List-based queue**:
+   - Uses two lists: `arriving` and `serving`
+   - Enqueues customers with `append()` and dequeues using `pop(0)`
+   - Prints arrival and serving messages
+
+2. **Linked list–based queue**:
+   - Uses `ListNode` for each customer
+   - `LinkedListQueue` class handles enqueue/dequeue logic with pointers
+   - Dynamically grows with no fixed capacity
+
